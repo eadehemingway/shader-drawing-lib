@@ -22,10 +22,18 @@ fragShaders.forEach((frag)=> {
     wrapper.appendChild(canvas);
 
     multiTileWrapper.appendChild(wrapper);
+
     const regl = REGL({ canvas });
+
     regl({
         attributes: {
             position: [[-1, -1], [1, -1], [1, 1], [1, 1], [-1, 1], [-1, -1]] // full quad triangles
+        },
+        uniforms: {
+            u_resolution: (context) => [
+                context.drawingBufferWidth,
+                context.drawingBufferHeight,
+            ]
         },
         count: 6,
         vert: vertShader,
