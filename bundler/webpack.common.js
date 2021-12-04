@@ -1,29 +1,31 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
-const path = require('path')
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
+const MediaQueryPlugin = require("media-query-plugin");
+const path = require("path");
 
 module.exports = {
-    entry: path.resolve(__dirname, '../src/script.js'),
+    entry: path.resolve(__dirname, "../src/script.js"),
     output:
     {
-        hashFunction: 'xxhash64',
-        filename: 'bundle.[contenthash].js',
-        path: path.resolve(__dirname, '../dist')
+        hashFunction: "xxhash64",
+        filename: "bundle.[contenthash].js",
+        path: path.resolve(__dirname, "../dist")
     },
-    devtool: 'source-map',
+    devtool: "source-map",
     plugins:
     [
         new CopyWebpackPlugin({
             patterns: [
-                { from: path.resolve(__dirname, '../static') }
+                { from: path.resolve(__dirname, "../static") }
             ]
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../src/index.html'),
+            template: path.resolve(__dirname, "../src/index.html"),
             minify: true
         }),
-        new MiniCSSExtractPlugin()
+        new MiniCSSExtractPlugin(),
+        new MediaQueryPlugin()
     ],
     module:
     {
@@ -34,7 +36,7 @@ module.exports = {
                 test: /\.(html)$/,
                 use:
                 [
-                    'html-loader'
+                    "html-loader"
                 ]
             },
 
@@ -44,7 +46,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use:
                 [
-                    'babel-loader'
+                    "babel-loader"
                 ]
             },
 
@@ -54,39 +56,40 @@ module.exports = {
                 use:
                 [
                     MiniCSSExtractPlugin.loader,
-                    'css-loader'
+                    "css-loader",
+                    MediaQueryPlugin.loader,
                 ]
             },
 
             // Images
             {
                 test: /\.(jpg|png|gif|svg)$/,
-                type: 'asset/resource',
+                type: "asset/resource",
                 generator:
                 {
-                    filename: 'assets/images/[hash][ext]'
+                    filename: "assets/images/[hash][ext]"
                 }
             },
 
             // Fonts
             {
                 test: /\.(ttf|eot|woff|woff2)$/,
-                type: 'asset/resource',
+                type: "asset/resource",
                 generator:
                 {
-                    filename: 'assets/fonts/[hash][ext]'
+                    filename: "assets/fonts/[hash][ext]"
                 }
             },
 
             // Shaders
             {
                 test: /\.(glsl|vs|fs|vert|frag)$/,
-                type: 'asset/source',
+                type: "asset/source",
                 generator:
                 {
-                    filename: 'assets/images/[hash][ext]'
+                    filename: "assets/images/[hash][ext]"
                 }
             }
         ]
     }
-}
+};

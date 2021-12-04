@@ -23,6 +23,13 @@ height: 250px;
     margin: 200px;
     gap: 50px
 }
+@media screen and (max-width: 1100px) {
+    .multi-tile-wrapper{
+        flex-direction: column;
+        border: 5px solid red;
+    }
+  }
+
 
 code {
     display: block;
