@@ -4,14 +4,35 @@
     padding: 0;
 }
 
-html,
-body
-{
-    overflow: hidden;
-}
 
-canvas
-{
+
+canvas{
 width: 250px;
 height: 250px;
+}
+
+
+.frag-shader-wrapper {
+
+    display: flex;
+}
+
+.multi-tile-wrapper{
+
+    display: flex;
+    margin: 200px;
+    gap: 50px
+}
+
+code {
+    display: block;
+    background: linen;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    max-width: 100%;
+    min-width: 100px;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
 }
