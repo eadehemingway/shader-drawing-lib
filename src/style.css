@@ -10,10 +10,8 @@ body
     overflow: hidden;
 }
 
-.webgl
+canvas
 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
+width: 250px;
+height: 250px;
 }

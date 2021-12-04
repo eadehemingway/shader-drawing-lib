@@ -1,31 +1,22 @@
-import fragShader from "./frag.frag";
-import vertShader from "./vert.vert";
+import oneFragShader from "./shaders/1.frag";
+import twoFragShader from "./shaders/2.frag";
+import vertShader from "./shaders/vert.vert";
+import "./style.css";
+
+const fragShaders = [oneFragShader, twoFragShader];
 
 const REGL = require("regl");
+const canvases = document.querySelectorAll("canvas");
 
-const canvas = document.querySelector("canvas");
-
-const regl = REGL({ canvas });
-
-
-const drawTriangle = regl({
-
-    attributes: {
-        position: [[-1, -1], [1, -1], [1, 1], [1, 1], [-1, 1], [-1, -1]] // full quad triangles
-    },
-    count: 6,
-    vert: vertShader,
-    frag: fragShader,
-
-
-
+canvases.forEach((canvas, i)=> {
+    const regl = REGL({ canvas });
+    regl({
+        attributes: {
+            position: [[-1, -1], [1, -1], [1, 1], [1, 1], [-1, 1], [-1, -1]] // full quad triangles
+        },
+        count: 6,
+        vert: vertShader,
+        frag: fragShaders[i],
+    })();
 });
 
-
-function render(){
-    const green = [0.2, 0.5, 0.4, 1.0]; // arbitrary background
-    regl.clear({ color: green });
-    drawTriangle();
-}
-
-regl.frame(render);
