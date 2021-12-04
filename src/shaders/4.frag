@@ -7,8 +7,9 @@ void main(){
 
     float right_white_block = step(0.1,st.x);
     float top_white_block = step(0.1,st.y);
+    // the + is a union if you think of the WHITE space
+    // as the drawing
+    color = vec3( right_white_block + top_white_block );
 
-    color = vec3( right_white_block * top_white_block );
-
-    gl_FragColor = vec4(color,1.0);
+    gl_FragColor = vec4(color, 1.0);
 }
