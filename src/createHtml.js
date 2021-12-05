@@ -12,7 +12,7 @@ function createHtml(frag, index){
 
     const wrapper = document.createElement("div");
     const title = document.createElement("h3");
-    title.textContent = `Fragment #${index}`;
+    title.textContent = `Fragment #${index + 1}`;
     wrapper.appendChild(title);
     wrapper.className = "frag-shader-wrapper";
     wrapper.appendChild(pre);

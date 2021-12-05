@@ -15,11 +15,11 @@ import fourteenthFragShader from "./shaders/14.frag";
 import fifteenthFragShader from "./shaders/15.frag";
 import sixteenthFragShader from "./shaders/16.frag";
 import seventeenthFragShader from "./shaders/17.frag";
-// import eighteenth from "./shaders/18.frag";
-// import nineteenth from "./shaders/19.frag";
-// import twenty from "./shaders/20.frag";
-// import twentyone from "./shaders/21.frag";
-// import twentytwo from "./shaders/22.frag";
+import eighteenth from "./shaders/18.frag";
+import nineteenth from "./shaders/19.frag";
+import twenty from "./shaders/20.frag";
+import twentyone from "./shaders/21.frag";
+import twentytwo from "./shaders/22.frag";
 // import twentythree from "./shaders/23.frag";
 // import twentyfour from "./shaders/24.frag";
 // import twentyfive from "./shaders/25.frag";
@@ -31,23 +31,28 @@ import { createHtml } from "./createHtml";
 import "./style.css";
 
 const fragShaders = [
-    oneFragShader,
-    twoFragShader,
-    threeFragShader,
-    fourFragShader,
-    fiveFragShader,
-    sixFragShader,
-    sevenFragShader,
-    eightFragShader,
-    nineFragShader,
-    tenFragShader,
-    elevenFragShader,
-    twelveFragShader,
-    thirteenFragShader,
-    fourteenthFragShader,
-    fifteenthFragShader,
-    sixteenthFragShader,
-    seventeenthFragShader
+    // oneFragShader,
+    // twoFragShader,
+    // threeFragShader,
+    // fourFragShader,
+    // fiveFragShader,
+    // sixFragShader,
+    // sevenFragShader,
+    // eightFragShader,
+    // nineFragShader,
+    // tenFragShader,
+    // elevenFragShader,
+    // twelveFragShader,
+    // thirteenFragShader,
+    // fourteenthFragShader,
+    // fifteenthFragShader,
+    // sixteenthFragShader,
+    seventeenthFragShader,
+    eighteenth,
+    nineteenth,
+    twenty,
+    twentyone,
+    twentytwo
 ];
 
 const REGL = require("regl");
