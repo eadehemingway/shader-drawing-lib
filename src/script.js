@@ -10,6 +10,22 @@ import nineFragShader from "./shaders/9.frag";
 import tenFragShader from "./shaders/10.frag";
 import elevenFragShader from "./shaders/11.frag";
 import twelveFragShader from "./shaders/12.frag";
+import thirteenFragShader from "./shaders/13.frag";
+import fourteenthFragShader from "./shaders/14.frag";
+import fifteenthFragShader from "./shaders/15.frag";
+import sixteenthFragShader from "./shaders/16.frag";
+import seventeenthFragShader from "./shaders/17.frag";
+// import eighteenth from "./shaders/18.frag";
+// import nineteenth from "./shaders/19.frag";
+// import twenty from "./shaders/20.frag";
+// import twentyone from "./shaders/21.frag";
+// import twentytwo from "./shaders/22.frag";
+// import twentythree from "./shaders/23.frag";
+// import twentyfour from "./shaders/24.frag";
+// import twentyfive from "./shaders/25.frag";
+// import twentysix from "./shaders/26.frag";
+// import twentyseven from "./shaders/27.frag";
+// import twentyeight from "./shaders/28.frag";
 import vertShader from "./shaders/vert.vert";
 import { createHtml } from "./createHtml";
 import "./style.css";
@@ -26,14 +42,18 @@ const fragShaders = [
     nineFragShader,
     tenFragShader,
     elevenFragShader,
-    twelveFragShader
+    twelveFragShader,
+    thirteenFragShader,
+    fourteenthFragShader,
+    fifteenthFragShader,
+    sixteenthFragShader,
+    seventeenthFragShader
 ];
 
 const REGL = require("regl");
 
-fragShaders.forEach((frag)=> {
-    console.log("cunt");
-    const canvas = createHtml(frag);
+fragShaders.forEach((frag, i)=> {
+    const canvas = createHtml(frag, i);
     const regl = REGL({ canvas });
 
     regl({

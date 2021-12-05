@@ -1,7 +1,7 @@
 
 const multiTileWrapper = document.querySelector(".multi-tile-wrapper");
 
-function createHtml(frag){
+function createHtml(frag, index){
 
     const canvas = document.createElement("canvas");
 
@@ -11,6 +11,9 @@ function createHtml(frag){
     pre.appendChild(text);
 
     const wrapper = document.createElement("div");
+    const title = document.createElement("h3");
+    title.textContent = `Fragment #${index}`;
+    wrapper.appendChild(title);
     wrapper.className = "frag-shader-wrapper";
     wrapper.appendChild(pre);
     wrapper.appendChild(canvas);
