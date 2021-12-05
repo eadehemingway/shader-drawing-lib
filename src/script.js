@@ -8,6 +8,8 @@ import sevenFragShader from "./shaders/7.frag";
 import eightFragShader from "./shaders/8.frag";
 import nineFragShader from "./shaders/9.frag";
 import tenFragShader from "./shaders/10.frag";
+import elevenFragShader from "./shaders/11.frag";
+import twelveFragShader from "./shaders/12.frag";
 import vertShader from "./shaders/vert.vert";
 import { createHtml } from "./createHtml";
 import "./style.css";
@@ -22,7 +24,9 @@ const fragShaders = [
     sevenFragShader,
     eightFragShader,
     nineFragShader,
-    tenFragShader
+    tenFragShader,
+    elevenFragShader,
+    twelveFragShader
 ];
 
 const REGL = require("regl");
