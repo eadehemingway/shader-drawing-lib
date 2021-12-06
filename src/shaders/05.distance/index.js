@@ -11,5 +11,7 @@ import ten from "./10.frag";
 import eleven from "./11.frag";
 import twelve from "./12.frag";
 import thirteen from "./13.frag";
+import forteen from "./14.frag";
+import fifteen from "./15.frag";
 
-export const distance_frags = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen];
+export const distance_frags = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, forteen, fifteen];
