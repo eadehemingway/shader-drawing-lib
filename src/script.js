@@ -13,7 +13,8 @@ const fragShaders = [
     // ...draw_frags,
     // ...mod_frags,
     // ...abs_frags,
-    ...floor_frags];
+    ...floor_frags
+];
 
 const REGL = require("regl");
 
