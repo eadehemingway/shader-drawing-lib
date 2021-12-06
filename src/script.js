@@ -3,6 +3,7 @@ import { floor_frags } from "./shaders/04.floor";
 import { mod_frags } from "./shaders/02.modulus";
 import { abs_frags } from "./shaders/03.abs";
 import { draw_frags } from "./shaders/01.draw-lines";
+import { distance_frags } from "./shaders/05.distance";
 
 import vertShader from "./shaders/vert.vert";
 import { createHtml } from "./createHtml";
@@ -13,7 +14,8 @@ const fragShaders = [
     // ...draw_frags,
     // ...mod_frags,
     // ...abs_frags,
-    ...floor_frags
+    // ...floor_frags,
+    ...distance_frags
 ];
 
 const REGL = require("regl");
