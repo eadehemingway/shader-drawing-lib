@@ -7,8 +7,8 @@ void main(){
 
     float offset = 0.2;
     // x bar (from before)
-    float strength_x = step(0.8, mod(st.y * 10.0, 1.0));
-    strength_x *= step(0.4, mod(st.x * 10.0 - offset, 1.0));
+    float strength_x =  step(0.4, mod(st.x * 10.0 - offset, 1.0));
+    strength_x *= step(0.8, mod(st.y * 10.0, 1.0));
 
     // y bar
     float strength_y = step(0.4, mod(st.y * 10.0 - offset, 1.0));

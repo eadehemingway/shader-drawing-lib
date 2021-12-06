@@ -48,9 +48,9 @@ const fragShaders = [
     // fifteenthFragShader,
     // sixteenthFragShader,
     // seventeenthFragShader,
-    // eighteenth,
-    // nineteenth,
-    // twenty,
+    eighteenth,
+    nineteenth,
+    twenty,
     twentyone,
     twentytwo,
     twentythree
