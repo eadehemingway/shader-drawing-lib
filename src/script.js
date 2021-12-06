@@ -20,7 +20,7 @@ import nineteenth from "./shaders/19.frag";
 import twenty from "./shaders/20.frag";
 import twentyone from "./shaders/21.frag";
 import twentytwo from "./shaders/22.frag";
-// import twentythree from "./shaders/23.frag";
+import twentythree from "./shaders/23.frag";
 // import twentyfour from "./shaders/24.frag";
 // import twentyfive from "./shaders/25.frag";
 // import twentysix from "./shaders/26.frag";
@@ -47,12 +47,13 @@ const fragShaders = [
     // fourteenthFragShader,
     // fifteenthFragShader,
     // sixteenthFragShader,
-    seventeenthFragShader,
-    eighteenth,
-    nineteenth,
-    twenty,
+    // seventeenthFragShader,
+    // eighteenth,
+    // nineteenth,
+    // twenty,
     twentyone,
-    twentytwo
+    twentytwo,
+    twentythree
 ];
 
 const REGL = require("regl");
