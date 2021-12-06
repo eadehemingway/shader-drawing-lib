@@ -12,6 +12,7 @@ import elevenFragShader from "./shaders/11.frag";
 import twelveFragShader from "./shaders/12.frag";
 import thirteenFragShader from "./shaders/13.frag";
 import fourteenthFragShader from "./shaders/14.frag";
+import fourteenAndHalfFragShader from "./shaders/14.5.frag";
 import fifteenthFragShader from "./shaders/15.frag";
 import sixteenthFragShader from "./shaders/16.frag";
 import seventeenthFragShader from "./shaders/17.frag";
@@ -43,16 +44,17 @@ const fragShaders = [
     // tenFragShader,
     // elevenFragShader,
     // twelveFragShader,
-    // thirteenFragShader,
-    // fourteenthFragShader,
-    // fifteenthFragShader,
+    thirteenFragShader,
+    fourteenthFragShader,
+    fourteenAndHalfFragShader,
+    fifteenthFragShader,
     // sixteenthFragShader,
     // seventeenthFragShader,
-    eighteenth,
-    nineteenth,
-    twenty,
-    twentyone,
-    twentytwo,
+    // eighteenth,
+    // nineteenth,
+    // twenty,
+    // twentyone,
+    // twentytwo,
     twentythree
 ];
 
