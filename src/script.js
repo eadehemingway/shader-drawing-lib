@@ -1,46 +1,88 @@
 import oneFragShader from "./shaders/1.frag";
-import { floor_frags } from "./shaders/04.floor";
-import { mod_frags } from "./shaders/02.modulus";
-import { abs_frags } from "./shaders/03.abs";
-import { draw_frags } from "./shaders/01.draw-lines";
-import { distance_frags } from "./shaders/05.distance";
-import { atan_frags } from "./shaders/06.atan";
-import { noise_frags } from "./shaders/07.noise";
-
+import { floor_frags } from "./shaders/floor";
+import { mod_frags } from "./shaders/modulus";
+import { abs_frags } from "./shaders/abs";
+import { draw_frags } from "./shaders/draw-lines";
+import { distance_frags } from "./shaders/distance";
+import { atan_frags } from "./shaders/atan";
+import { noise_frags } from "./shaders/noise";
+import { splat_frags } from "./shaders/splat";
 import vertShader from "./shaders/vert.vert";
-import { createHtml } from "./createHtml";
+import { createHtml, clearDom } from "./createHtml";
 import "./style.css";
 
-const fragShaders = [
-    // oneFragShader,
-    // ...draw_frags,
-    // ...mod_frags,
-    ...abs_frags,
-    ...floor_frags,
-    ...distance_frags,
-    ...atan_frags,
-    // ...noise_frags
+const frag_groups = [{
+    frags: floor_frags,
+    src: "floor.png"
+},
+{
+    frags: mod_frags,
+    src: "mods.png"
+
+},
+{
+    frags: abs_frags,
+    src: "abs.png"
+
+},{
+    frags: draw_frags,
+    src: "draw.png"
+
+},{
+    frags: distance_frags,
+    src: "distance.png"
+
+},{
+    frags: atan_frags,
+    src: "atan.png"
+
+},{
+    frags: noise_frags,
+    src: "noise.png"
+
+},{
+    frags: splat_frags,
+    src: "splat.png"
+
+}
 ];
 
-const REGL = require("regl");
 
-fragShaders.forEach((frag, i)=> {
-    const canvas = createHtml(frag, i);
-    const regl = REGL({ canvas });
 
-    regl({
-        attributes: {
-            position: [[-1, -1], [1, -1], [1, 1], [1, 1], [-1, 1], [-1, -1]] // full quad triangles
-        },
-        uniforms: {
-            u_resolution: (context) => [
-                context.drawingBufferWidth,
-                context.drawingBufferHeight,
-            ]
-        },
-        count: 6,
-        vert: vertShader,
-        frag: frag,
-    })();
+frag_groups.forEach(obj=> {
+    const button = document.createElement("button");
+    button.addEventListener("click", ()=> {
+        clearDom();
+        createShaders(obj.frags);
+    });
+    const img = document.createElement("img");
+    img.src = `./images/${obj.src}`;
+
+    button.appendChild(img);
+    document.querySelector(".nav").appendChild(button);
 });
+
+const REGL = require("regl");
+function createShaders(frags){
+    frags.forEach((frag, i)=> {
+        const canvas = createHtml(frag, i);
+        const regl = REGL({ canvas });
+
+        regl({
+            attributes: {
+                position: [[-1, -1], [1, -1], [1, 1], [1, 1], [-1, 1], [-1, -1]] // full quad triangles
+            },
+            uniforms: {
+                u_resolution: (context) => [
+                    context.drawingBufferWidth,
+                    context.drawingBufferHeight,
+                ]
+            },
+            count: 6,
+            vert: vertShader,
+            frag: frag,
+        })();
+    });
+
+}
 

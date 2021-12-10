@@ -1,4 +1,5 @@
 
+
 const multiTileWrapper = document.querySelector(".multi-tile-wrapper");
 
 function createHtml(frag, index){
@@ -26,4 +27,8 @@ function createHtml(frag, index){
 
 }
 
-export { createHtml };
+function clearDom(){
+    multiTileWrapper.innerHTML = "";
+}
+
+export { createHtml, clearDom };

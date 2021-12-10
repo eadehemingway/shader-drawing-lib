@@ -51,3 +51,8 @@ code {
     height: 100%;
     box-sizing: border-box;
 }
+
+button img {
+width: 100px;
+height: 100px;
+}

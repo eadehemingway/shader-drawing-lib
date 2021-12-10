@@ -7,4 +7,14 @@ import six from "./6.frag";
 import seven from "./7.frag";
 import eight from "./8.frag";
 
-export const abs_frags = [one, two, three, four, five, six, seven, eight];
+export const splat_frags = [
+    one,
+    two,
+    three,
+    four,
+    five,
+    six,
+    seven,
+    eight,
+
+];

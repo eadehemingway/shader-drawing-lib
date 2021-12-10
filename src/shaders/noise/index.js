@@ -16,9 +16,9 @@ import four from "./4.frag";
 
 export const noise_frags = [
     one,
-    two,
-    three,
-    four,
+    // two,
+    // three,
+    // four,
     // five,
     // six,
     // seven,
