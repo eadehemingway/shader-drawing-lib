@@ -1,0 +1,54 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+canvas{
+width: 250px;
+height: 250px;
+}
+
+pre {
+width: 100%;
+}
+
+.frag-shader-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background: linen;
+    border: 10px solid linen;
+}
+
+.multi-tile-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 200px 40px;
+    gap: 50px
+
+}
+
+@media screen and (max-width: 1400px) {
+    .multi-tile-wrapper{
+        grid-template-columns: 1fr;
+
+        margin: 200px 40px;
+    }
+  }
+
+code {
+    display: block;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    max-width: 100%;
+    width: 100%;
+    min-width: 100px;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/*# sourceMappingURL=main.css.map*/

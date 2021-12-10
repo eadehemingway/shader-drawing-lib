@@ -5,6 +5,7 @@ import { abs_frags } from "./shaders/03.abs";
 import { draw_frags } from "./shaders/01.draw-lines";
 import { distance_frags } from "./shaders/05.distance";
 import { atan_frags } from "./shaders/06.atan";
+import { noise_frags } from "./shaders/07.noise";
 
 import vertShader from "./shaders/vert.vert";
 import { createHtml } from "./createHtml";
@@ -14,10 +15,11 @@ const fragShaders = [
     // oneFragShader,
     // ...draw_frags,
     // ...mod_frags,
-    // ...abs_frags,
-    // ...floor_frags,
-    // ...distance_frags,
-    ...atan_frags
+    ...abs_frags,
+    ...floor_frags,
+    ...distance_frags,
+    ...atan_frags,
+    // ...noise_frags
 ];
 
 const REGL = require("regl");
