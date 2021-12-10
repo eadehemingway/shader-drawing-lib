@@ -11,40 +11,44 @@ import vertShader from "./shaders/vert.vert";
 import { createHtml, clearDom } from "./createHtml";
 import "./style.css";
 
-const frag_groups = [{
-    frags: floor_frags,
-    src: "floor.png"
-},
-{
-    frags: mod_frags,
-    src: "mods.png"
+const frag_groups = [
+    {
+        frags: draw_frags,
+        src: "draw.png"
 
-},
-{
-    frags: abs_frags,
-    src: "abs.png"
+    },
+    {
+        frags: mod_frags,
+        src: "mods.png"
 
-},{
-    frags: draw_frags,
-    src: "draw.png"
+    },
+    {
+        frags: floor_frags,
+        src: "floor.png"
+    },
 
-},{
-    frags: distance_frags,
-    src: "distance.png"
+    {
+        frags: abs_frags,
+        src: "abs.png"
 
-},{
-    frags: atan_frags,
-    src: "atan.png"
+    },{
+        frags: distance_frags,
+        src: "distance.png"
 
-},{
-    frags: noise_frags,
-    src: "noise.png"
+    },{
+        frags: atan_frags,
+        src: "atan.png"
 
-},{
-    frags: splat_frags,
-    src: "splat.png"
+    },{
+        frags: splat_frags,
+        src: "splat.png"
 
-}
+    },
+    {
+        frags: noise_frags,
+        src: "noise.png"
+
+    }
 ];
 
 

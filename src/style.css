@@ -55,4 +55,15 @@ code {
 button img {
 width: 100px;
 height: 100px;
+cursor: pointer;
+}
+button{
+    margin: 10px;
+    border:none;
+;
+}
+.nav {
+    text-align: center;
+    margin-top: 90px
+;
 }
