@@ -1,4 +1,4 @@
-
+import one from "./1.frag";
 import two from "./2.frag";
 import three from "./3.frag";
 import four from "./4.frag";
@@ -10,5 +10,20 @@ import nine from "./9.frag";
 import ten from "./10.frag";
 import eleven from "./11.frag";
 import twelve from "./12.frag";
+import thirteen from "./13.frag";
 
-export const draw_frags = [two, three, four, five, six, seven, eight, nine, ten, eleven, twelve];
+export const draw_frags = [
+  one,
+  two,
+  three,
+  four,
+  five,
+  six,
+  seven,
+  eight,
+  nine,
+  ten,
+  eleven,
+  twelve,
+  thirteen,
+];
