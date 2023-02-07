@@ -90,14 +90,13 @@ module.exports = {
                     filename: "assets/images/[hash][ext]"
                 }
             },
-            // {
-            //     test: /\.(glsl|vs|fs|vert|frag)$/,
-            //     exclude: /node_modules/,
-            //     use: [
-            //         "raw-loader",
-            //         "glslify-loader"
-            //     ]
-            // }
+            {
+                test: /\.(glsl|vs|fs|vert|frag)$/,
+                exclude: /node_modules/,
+                use: [
+                    "glslify-loader"
+                ]
+            }
         ]
     }
 };
